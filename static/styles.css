@@ -1,0 +1,231 @@
+
+/* Reset some default browser styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: monospace;
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+/* Define the scrollbar styles */
+body::-webkit-scrollbar {
+    width: 15px; /* Set the width of the scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background-color:  #f2f2f2; /* Set background color of the scrollbar track */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #aaa; /* Set color of the scrollbar thumb */
+    border-radius: 20px; /* Round the corners of the scrollbar thumb */
+}
+
+
+header {
+    background-color: #1a1a1a; /* Change to your preferred color */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.title {
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.title span {
+    color: #f0c518;
+}
+
+.summary {
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.book-count {
+    background-color: #222; /* Match the main background color */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.book-count p {
+    text-align: right;
+    margin: 0;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.book-section {
+    text-align: center;
+    margin: 20px 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-bottom: 5px; /* Add space between text and border */
+    display: inline-block; /* Make the border span only the width of the text */
+    border-bottom: 2px solid #f0c518; /* Add a default border line for emphasis */
+}
+
+/* Style section titles for read books */
+/* Style section titles for read books */
+.read .section-title {
+    color: #f4ece6; /* Cream color */
+    border-color: #f4ece6; /* Cream color */
+}
+
+/* Style section titles for books that are done */
+.done .section-title {
+    color: #f5f5f5; /* Off-white color */
+    border-color: #f5f5f5; /* Off-white color */
+}
+
+/* Style section titles for books that are not read yet */
+.not-read .section-title {
+    color: #f2dfd7; /* Light cream color */
+    border-color: #f2dfd7; /* Light cream color */
+}
+
+
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Highlight the drop target */
+.book-entry.drag-enter {
+    border: 2px dashed #f0c518;
+}
+
+.book-entry.dragging {
+    background-color: white;
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.book-entry {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: space-between; /* Adjust vertical alignment */
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 250px; /* Set a max-width for the book entries */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.book-entry a {
+    display: flex; /* Adjust the link to be flex container */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally within link */
+    text-decoration: none;
+    color: #333;
+}
+
+
+.book-entry:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.book-entry img {
+    width: 140px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    vertical-align: middle; /* Adjust the vertical alignment */
+}
+
+/* Adjust book title style */
+.book-entry h3 {
+    font-size: 18px; /* Adjust font size to make it slightly larger */
+    font-weight: bold; /* Make the title bold */
+    margin: 10px 0; 
+    text-align: center;
+    max-width: 120px;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #333;
+}
+
+/* Style author entry */
+.book-entry .author {
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: center;
+    color: #555; /* Adjust color for author's entry */
+}
+
+/* Add space for the review */
+.book-entry .review {
+    font-size: 14px; /* Adjust font size for the review */
+    margin-top: 5px; /* Add space between title and review */
+    text-align: center;
+    color: #777; /* Light gray color for the review text */
+}
+
+.stars {
+    font-size: 24px; /* Adjust the font size to make stars bigger */
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #f0c518;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+.github-link {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer img {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    border-radius: 50%;
+}
