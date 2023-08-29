@@ -1,4 +1,4 @@
 # readME
-**my 2023 reading list**
+**a reading list**
 
 [Visit Here :)](https://blakemartinez.github.io/readME/)
