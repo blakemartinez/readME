@@ -32,7 +32,7 @@ body::-webkit-scrollbar-thumb {
 
 
 header {
-    background-color: #1a1a1a;
+    background-color: #6F4E37;
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -57,7 +57,6 @@ header {
 
 .book-count {
     background-color: #222;
-    /* Match the main background color */
     color: #fff;
     display: flex;
     align-items: center;
@@ -70,6 +69,20 @@ header {
     font-size: 14px;
 }
 
+.book-goal {
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.book-goal p {
+    text-align: left;
+    margin: 0;
+    font-size: 14px;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -78,7 +91,7 @@ header {
 
 .book-section {
     text-align: center;
-    margin: 20px 0;
+    margin: 25px 0;
     padding-top: 0;
     padding-bottom: 0;
 }
@@ -188,7 +201,7 @@ header {
     font-size: 14px;
     margin-top: 5px;
     text-align: center;
-    color: #777;
+    color: #6F4E37;
 }
 
 .stars {
