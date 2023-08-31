@@ -7,20 +7,36 @@ readCountElement.textContent = readCount;
 
 const lastUpdatedElement = document.getElementById('last-updated');
 
-const lastUpdatedTimestamp = new Date('2023-09-01T22:02:45').getTime(); // Replace with time
+// Set the last updated timestamp to the current time in Central Time (statically)
+const lastUpdatedTimestamp = new Date('2023-08-31T00:47:32').getTime(); // Replace with the desired timestamp
 
+// Display the last updated timestamp
 const formattedDate = new Date(lastUpdatedTimestamp).toLocaleString('en-US', {
-    timeZone: 'America/Chicago', 
+    timeZone: 'America/Chicago', // Set the timezone to Central Time
 });
+lastUpdatedElement.textContent = `${formattedDate}`;
 
-const toggleIcons = document.querySelectorAll('.toggle-icon');
+const readBooks = document.querySelectorAll('.read .book-entry');
+const doneBooks = document.querySelectorAll('.done .book-entry');
 
-toggleIcons.forEach((toggleIcon) => {
-    toggleIcon.addEventListener('click', () => {
-        console.log("yo");
-        const section = toggleIcon.closest('.book-section');
-        const sectionContent = section.querySelector('.section-content');
-        sectionContent.classList.toggle('expanded');
-        sectionContent.classList.toggle('collapsed');
+// Combine the book lists from "read" and "done" sections
+const allReadAndDoneBooks = [...readBooks, ...doneBooks];
+
+// Create an object to store genre counts
+const genreCounts = {};
+
+// Loop through the combined book list and count genres
+allReadAndDoneBooks.forEach((book) => {
+    const genres = book.dataset.genres.split(','); // Get genres from dataset
+    genres.forEach((genre) => {
+        genreCounts[genre] = (genreCounts[genre] || 0) + 1;
     });
 });
+
+// Update the genre tally elements with the counts
+for (const genre in genreCounts) {
+    const tallyElement = document.querySelector(`.${genre} .genre-count`);
+    if (tallyElement) {
+        tallyElement.textContent = `${genreCounts[genre]}`;
+    }
+}

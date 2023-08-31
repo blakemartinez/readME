@@ -11,8 +11,10 @@
 
 <body>
     <header>
-        <h1 class="title">read<span>ME</span></h1>
-        <p class="summary">keeping track of my reading for 2023</p>
+        <h1 class="title">read<span>ME </span></h1>
+        <p class="summary">keeping track of my reading for 2023 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" fill="currentColor" class="bi bi-book" viewBox="0 0 20 15">
+            <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+          </svg></p>
     </header>
 
     <div class="book-count">
@@ -25,91 +27,94 @@
 
     <section class="book-section read">
         <h2 class="section-title">reading</h2>
-        <span class="toggle-icon">+</span>
-        <div class="section-content">
             <div class="book-list" id="read-list">
-                <div class="book-entry">
+                <div class="book-entry" data-genres="fantasy">
                     <a href="https://www.goodreads.com/book/show/68428.The_Final_Empire" target="_blank">
                         <img src="static/mistborn.png" alt="Mistborn Cover">
                         <h3>Mistborn</h3>
                         <p class="author">Brandon Sanderson</p>
                         <p class="stars">☆☆☆☆☆</p>
-                        <p class="review">so far, cool magic stuff. i heard this fantasy series is one of the best</p>
+                        <p class="review">so far, cool magic stuff. i heard this series is one of the best and i'll get addicted to Sanderson's work</p>
+                        <p class="genre-tag fantasy">Fantasy</p>
                     </a>
                 </div>
             </div>
-        </div>
     </section>
 
     <section class="book-section done">
         <h2 class="section-title">done</h2>
-        <span class="toggle-icon">+</span>
-        <div class="section-content">
         <div class="book-list" id="done-list">
-            <div class="book-entry">
+            <div class="book-entry" data-genres="sci-fi">
                 <a href="https://www.goodreads.com/en/book/show/20518872" target="_blank">
                     <img src="static/three-body-problem.jpg" alt="The Three Body Problem Cover">
                     <h3>The Three Body Problem</h3>
                     <p class="author">Cixin Liu</p>
                     <p class="stars">★★★★★</p>
-                    <p class="review">what an intro to this trilogy. So much science and futuristic tech</p>
+                    <p class="review">what an intro to this trilogy(RoEP). So much science and futuristic tech, while some serious morality issues being brought up</p>
+                    <p class="genre-tag sci-fi">Sci-Fi</p>
                 </a>
             </div>
-            <div class="book-entry">
+            <div class="book-entry" data-genres="sci-fi">
                 <a href="https://www.goodreads.com/book/show/23168817-the-dark-forest" target="_blank">
                     <img src="static/dark-forest.jpg" alt="The Dark Forest">
                     <h3>The Dark Forest</h3>
                     <p class="author">Cixin Liu</p>
                     <p class="stars">★★★☆☆</p>
-                    <p class="review">this one gets weird, but still good setup for final beast of a book</p>
+                    <p class="review">this one gets weird, but still good setup for final beast of a book. The whole series kind of asks the question: how would earth react if we know aliens are coming to invade in like 500 yrs</p>
+                    <p class="genre-tag sci-fi">Sci-Fi</p>                
                 </a>
             </div>
-            <div class="book-entry">
+            <div class="book-entry" data-genres="sci-fi">
                 <a href="https://www.goodreads.com/book/show/25451264-death-s-end" target="_blank">
                     <img src="static/deaths-end.jpg" alt="Death's End">
                     <h3>Death's End</h3>
                     <p class="author">Cixin Liu</p>
                     <p class="stars">★★★★★</p>
-                    <p class="review">legit so wild, the ending still messes me up. love the series</p>
+                    <p class="review">legit so wild, the ending still messes me up. great conclusion to probably my favorite trilogy ever. You get everything: sci-fi / aliens / engineering / war / love / morality / future human existence / alien-human interaction</p>
+                    <p class="genre-tag sci-fi">Sci-Fi</p>            
                 </a>
             </div>
-            <div class="book-entry">
+            <div class="book-entry" data-genres="mystery">
                 <a href="https://www.goodreads.com/book/show/40097951-the-silent-patient" target="_blank">
                     <img src="static/silent-patient.jpeg" alt="The Silent Patient">
                     <h3>The Silent Patient</h3>
                     <p class="author">Alex Michaelides</p>
                     <p class="stars">★★★★☆</p>
                     <p class="review">fast paced book, ending pretty wild, quick read </p>
+                    <p class="genre-tag mystery">Mystery</p>
+
                 </a>
             </div>
-            <div class="book-entry">
+            <div class="book-entry" data-genres="sci-fi">
                 <a href="https://www.goodreads.com/en/book/show/1796948" target="_blank">
                     <img src="static/i-robot.jpeg" alt="iRobot">
                     <h3>iRobot</h3>
                     <p class="author">Isaac Asimov</p>
                     <p class="stars">★★☆☆☆</p>
-                    <p class="review">just eh, got stars from the sci-fi</p>
+                    <p class="review">just eh, got stars from the sci-fi aspect alone, stories were a bit boring</p>
+                    <p class="genre-tag sci-fi">Sci-Fi</p>            
                 </a>
             </div>
-            <div class="book-entry">
+            <div class="book-entry" data-genres="nonfiction">
                 <a href="https://www.goodreads.com/book/show/208745.Goodbye_Descartes/" target="_blank">
                     <img src="static/goodbye-descartes.jpeg" alt="Goodbye, Descartes">
                     <h3>Goodbye Descartes</h3>
                     <p class="author">Keith Delvin</p>
                     <p class="stars">★★★★☆</p>
                     <p class="review">laws of thought and logic in the eyes of ancient Greeks. Interesting to read about what they thought about AI in the late 90's</p>
+                    <p class="genre-tag nonfiction">Non-fiction</p>                           
                 </a>
             </div>
-            <div class="book-entry">
+            <div class="book-entry" data-genres="sci-fi">
                 <a href="https://www.goodreads.com/book/show/56179333-even-greater-mistakes" target="_blank">
                     <img src="static/even-greater-mistakes.jpeg" alt="Even Greater Mistakes">
                     <h3>Even Greater Mistakes</h3>
                     <p class="author">Charlie Jane Anders</p>
                     <p class="stars">★★☆☆☆</p>
                     <p class="review">"the best sci-fi short stories" -people <br> "most of the short stories are lame tbh" - me</p>
+                    <p class="genre-tag sci-fi">Sci-Fi</p>
                 </a>
             </div>
-        </div>
         </div>
     </section>
 
@@ -117,21 +122,51 @@
 
     <section class="book-section not-read">
         <h2 class="section-title">soon</h2>
-        <span class="toggle-icon">+</span>
-        <div class="section-content">
         <div class="book-list" id="read-list">
-            <div class="book-entry">
+            <div class="book-entry" data-genres="tech">
                 <a href="https://www.goodreads.com/book/show/45307730-the-creativity-code" target="_blank">
                     <img src="static/the-creativity-code.jpeg" alt="The Creativity Code">
                     <h3>The Creativity Code</h3>
                     <p class="author">Marcus du Sautoy</p>
                     <p class="stars">☆☆☆☆☆</p>
                     <p class="review">AI!!!!!</p>
+                    <p class="genre-tag tech">Tech</p>
+
+                </a>
+            </div>
+            <div class="book-entry" data-genres="sci-fi">
+                <a href="https://www.goodreads.com/book/show/49247266-to-hold-up-the-sky" target="_blank">
+                    <img src="static/to-hold-up-the-sky.jpeg" alt="To Hold Up The Sky">
+                    <h3>To Hold Up The Sky</h3>
+                    <p class="author">Cixin Liu</p>
+                    <p class="stars">☆☆☆☆☆</p>
+                    <p class="review">Short Stories but by Liu...After the "Remembrance of Earth's Past" series, I need to read all his books</p>
+                    <p class="genre-tag sci-fi">Sci-Fi</p>
                 </a>
             </div>
         </div>
-        </div>
     </section>
+
+    <div class="genre-tallies">
+        <h3 class="tally-title">count</h3>
+        <div class="genre-tally sci-fi">
+            <p><span class="tag sci-fi">Sci-Fi</span>: <span class="genre-count">0</span></p>
+        </div>
+        <div class="genre-tally fantasy">
+            <p><span class="tag fantasy">Fantasy</span>: <span class="genre-count">0</span></p>
+        </div>
+        <div class="genre-tally mystery">
+            <p><span class="tag mystery">Mystery</span>: <span class="genre-count">0</span></p>
+        </div>
+        <div class="genre-tally nonfiction">
+            <p><span class="tag nonfiction">Nonfiction</span>: <span class="genre-count">0</span></p>
+        </div>
+        <div class="genre-tally tech">
+            <p><span class="tag tech">Tech</span>: <span class="genre-count">0</span></p>
+        </div>    </div>
+    
+    
+    
 
     <footer>
         <div class="github-link">

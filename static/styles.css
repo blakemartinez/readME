@@ -126,31 +126,6 @@ header {
     justify-content: center;
 }
 
-.section-content {
-    display: none;
-    padding: 10px 0;
-}
-
-.expanded .section-content {
-    display: block;
-}
-
-.section-title:hover {
-    border-color: transparent;
-}
-
-.toggle-icon {
-    font-size: 24px;
-    margin-left: 5px;
-    cursor: pointer;
-    transition: transform 0.2s;
-    transform-origin: center;
-}
-
-.collapsed .toggle-icon {
-    transform: rotate(45deg);
-}
-
 .book-entry {
     cursor: pointer;
     display: flex;
@@ -226,6 +201,71 @@ header {
     align-items: center;
     gap: 5px;
     color: #f0c518;
+}
+
+.genre-tag {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.sci-fi {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.fantasy {
+    background-color: #ffbf00;
+    color: #fff;
+}
+
+.mystery {
+    background-color: #9b59b6; 
+    color: #fff;
+}
+
+.tech {
+    background-color: #27ae60; 
+    color: #fff;
+}
+
+.nonfiction {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.genre-tallies {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.tally-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #fff; 
+    text-align: center;
+}
+
+
+.genre-tally {
+    margin: 5px 0;
+    font-size: 16px;
+    position: relative;
+    text-align: center;
+    background-color: #222;
+}
+
+/* Add styles for genre names */
+.tag {
+    font-size: 14px;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-right: 5px;
+    display: inline-block;
 }
 
 footer {
