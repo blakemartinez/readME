@@ -16,7 +16,7 @@
     </header>
 
     <div class="book-count">
-        <p>book read: <span id="read-count">_</span></p>
+        <p>book done: <span id="read-count">_</span></p>
     </div>
 
     <div class="book-goal">
@@ -25,15 +25,18 @@
 
     <section class="book-section read">
         <h2 class="section-title">reading</h2>
-        <div class="book-list" id="read-list">
-            <div class="book-entry">
-                <a href="https://www.goodreads.com/book/show/68428.The_Final_Empire" target="_blank">
-                    <img src="static/mistborn.png" alt="Mistborn Cover">
-                    <h3>Mistborn</h3>
-                    <p class="author">Brandon Sanderson</p>
-                    <p class="stars">☆☆☆☆☆</p>
-                    <p class="review">so far, cool magic stuff. i heard this fantasy series is one of the best</p>
-                </a>
+        <span class="toggle-icon">+</span>
+        <div class="section-content">
+            <div class="book-list" id="read-list">
+                <div class="book-entry">
+                    <a href="https://www.goodreads.com/book/show/68428.The_Final_Empire" target="_blank">
+                        <img src="static/mistborn.png" alt="Mistborn Cover">
+                        <h3>Mistborn</h3>
+                        <p class="author">Brandon Sanderson</p>
+                        <p class="stars">☆☆☆☆☆</p>
+                        <p class="review">so far, cool magic stuff. i heard this fantasy series is one of the best</p>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -41,6 +44,8 @@
 
     <section class="book-section done">
         <h2 class="section-title">done</h2>
+        <span class="toggle-icon">+</span>
+        <div class="section-content">
         <div class="book-list" id="done-list">
             <div class="book-entry">
                 <a href="https://www.goodreads.com/en/book/show/20518872" target="_blank">
@@ -106,12 +111,15 @@
                 </a>
             </div>
         </div>
+        </div>
     </section>
 
     <!-- More book sections... -->
 
     <section class="book-section not-read">
         <h2 class="section-title">soon</h2>
+        <span class="toggle-icon">+</span>
+        <div class="section-content">
         <div class="book-list" id="read-list">
             <div class="book-entry">
                 <a href="https://www.goodreads.com/book/show/45307730-the-creativity-code" target="_blank">
@@ -123,14 +131,16 @@
                 </a>
             </div>
         </div>
+        </div>
     </section>
 
     <footer>
         <div class="github-link">
-            <a href="https://github.com/blakemartinez">
+            <a href="https://github.com/blakemartinez" target="_blank">
                 <img src="static/github-icon.jpeg" alt="GitHub Icon">
             </a>
         </div>
+        <p>Last updated: <span id="last-updated"></span></p>
         <div class="BAM">
             <h1>BAM</h1>
         </div>

@@ -32,7 +32,7 @@ body::-webkit-scrollbar-thumb {
 
 
 header {
-    background-color: #6F4E37;
+    background-color: #565245;
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -120,23 +120,36 @@ header {
     border-color: #f2dfd7;
 }
 
-
 .book-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.book-entry.drag-enter {
-    border: 2px dashed #f0c518;
+.section-content {
+    display: none;
+    padding: 10px 0;
 }
 
-.book-entry.dragging {
-    background-color: white;
-    transform: translateY(-5px);
-    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
+.expanded .section-content {
+    display: block;
 }
 
+.section-title:hover {
+    border-color: transparent;
+}
+
+.toggle-icon {
+    font-size: 24px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    transform-origin: center;
+}
+
+.collapsed .toggle-icon {
+    transform: rotate(45deg);
+}
 
 .book-entry {
     cursor: pointer;
@@ -144,12 +157,12 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 15px;
     margin: 10px;
     border: 1px solid #ccc;
     background-color: #fff;
     border-radius: 10px;
-    max-width: 250px;
+    max-width: 225px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -165,16 +178,17 @@ header {
 
 .book-entry:hover {
     transform: translateY(-5px);
-    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(240, 197, 24, 0.5); /* Subtle glow color */
 }
 
 
 
 .book-entry img {
     width: 140px;
-    height: auto;
+    height: 200px;
     margin-bottom: 10px;
     border-radius: 10px;
+    border: 2px solid #222; 
     vertical-align: middle;
 }
 
@@ -201,7 +215,7 @@ header {
     font-size: 14px;
     margin-top: 5px;
     text-align: center;
-    color: #6F4E37;
+    color: #565245;
 }
 
 .stars {
@@ -218,6 +232,10 @@ footer {
     text-align: center;
     padding: 20px;
     color: #fff;
+}
+
+footer p {
+    text-decoration: overline ;
 }
 
 .BAM {
