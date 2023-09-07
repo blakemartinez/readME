@@ -33,10 +33,11 @@ body::-webkit-scrollbar-thumb {
 
 
 header {
-    background-color: #565245;
+    /* background-color: #565245; */
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    border-bottom: 1px solid #fff;
 }
 
 .title {
@@ -61,7 +62,7 @@ header {
     color: #fff;
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 10px;
 }
 
 .book-count p {
@@ -75,7 +76,7 @@ header {
     color: #fff;
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 10px;
 }
 
 .book-goal p {
