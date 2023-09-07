@@ -8,7 +8,7 @@ readCountElement.textContent = readCount;
 const lastUpdatedElement = document.getElementById('last-updated');
 
 // Set the last updated timestamp to the current time in Central Time (statically)
-const lastUpdatedTimestamp = new Date('2023-08-31T00:47:32').getTime(); // Replace with the desired timestamp
+const lastUpdatedTimestamp = new Date('2023-09-06T20:50:32').getTime(); // Replace with the desired timestamp
 
 // Display the last updated timestamp
 const formattedDate = new Date(lastUpdatedTimestamp).toLocaleString('en-US', {
