@@ -316,13 +316,14 @@ footer img {
     }
 
     .book-entry {
+        max-height: 300px; /* Set a maximum height for book entries */
         width: calc(25% - 20px); /* 25% width for 4 entries per row with margin */
         margin: 10px 0; /* Adjust margins for mobile spacing */
         box-sizing: border-box; /* Include padding and border in width calculation */
     }
 
     .book-entry img {
-        width: 100%; /* Make book entry images take full width */
+        width: 90%; /* Make book entry images take full width */
         height: auto; /* Maintain aspect ratio of images */
     }
 }
