@@ -1,42 +1,60 @@
-// Get the number of books you have read
 const readCount = document.querySelectorAll('.done .book-entry').length;
 
-// Update the book count in the HTML
 const readCountElement = document.getElementById('read-count');
 readCountElement.textContent = readCount;
 
 const lastUpdatedElement = document.getElementById('last-updated');
 
-// Set the last updated timestamp to the current time in Central Time (statically)
-const lastUpdatedTimestamp = new Date('2023-09-06T20:50:32').getTime(); // Replace with the desired timestamp
+const lastUpdatedTimestamp = new Date('2023-09-09T14:50:32').getTime(); 
 
-// Display the last updated timestamp
 const formattedDate = new Date(lastUpdatedTimestamp).toLocaleString('en-US', {
     timeZone: 'America/Chicago', // Set the timezone to Central Time
 });
 lastUpdatedElement.textContent = `${formattedDate}`;
 
+
+
+
 const readBooks = document.querySelectorAll('.read .book-entry');
 const doneBooks = document.querySelectorAll('.done .book-entry');
 
-// Combine the book lists from "read" and "done" sections
 const allReadAndDoneBooks = [...readBooks, ...doneBooks];
 
-// Create an object to store genre counts
 const genreCounts = {};
 
-// Loop through the combined book list and count genres
 allReadAndDoneBooks.forEach((book) => {
-    const genres = book.dataset.genres.split(','); // Get genres from dataset
+    const genres = book.dataset.genres.split(','); 
     genres.forEach((genre) => {
         genreCounts[genre] = (genreCounts[genre] || 0) + 1;
     });
 });
 
-// Update the genre tally elements with the counts
+
+
+
 for (const genre in genreCounts) {
     const tallyElement = document.querySelector(`.${genre} .genre-count`);
     if (tallyElement) {
         tallyElement.textContent = `${genreCounts[genre]}`;
     }
 }
+
+// Get all book entry elements
+const bookEntries = document.querySelectorAll('.book-entry');
+
+// Add a click event listener to each book entry
+bookEntries.forEach((bookEntry) => {
+    // Find the review container within the book entry
+    const reviewContainer = bookEntry.querySelector('.review-container');
+    
+    // Add a click event listener to the book entry
+    bookEntry.addEventListener('click', () => {
+        // Toggle the visibility of the review container
+        reviewContainer.classList.toggle('show-review');
+    
+        const clickNote = document.querySelector('.click-note');
+        if (clickNote) {
+            clickNote.style.display = 'none';
+        }
+    });
+});

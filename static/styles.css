@@ -152,18 +152,14 @@ header {
     color: #333;
 }
 
-
 .book-entry:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 10px rgba(240, 197, 24, 0.5); /* Subtle glow color */
 }
 
-
-
 .book-entry img {
-    width: 140px;
-    height: 200px;
-    margin-bottom: 10px;
+    width: 120px;
+    height: auto;
     border-radius: 10px;
     border: 2px solid #222; 
     vertical-align: middle;
@@ -182,17 +178,34 @@ header {
 }
 
 .book-entry .author {
-    font-size: 14px;
+    font-size: 10px;
     margin-top: 5px;
     text-align: center;
     color: #555;
 }
 
+
 .book-entry .review {
-    font-size: 14px;
+    font-size: 13px;
     margin-top: 5px;
     text-align: center;
     color: #565245;
+}
+
+.review-container {
+    display: none;
+}
+
+.show-review {
+    display: block;
+}
+
+.click-note {
+    text-align: center;
+    align-items: center;
+    color: #ffffff;
+    border-radius: 5px;
+    margin-bottom: 3px;
 }
 
 .stars {
@@ -237,6 +250,11 @@ header {
     color: #fff;
 }
 
+.fiction {
+    background-color: #835c30;
+    color: #fff;
+}
+
 .genre-tallies {
     font-size: 12px;
     padding: 4px 8px;
@@ -260,7 +278,6 @@ header {
     background-color: #222;
 }
 
-/* Add styles for genre names */
 .tag {
     font-size: 14px;
     color: white;
@@ -305,30 +322,33 @@ footer img {
     border-radius: 50%;
 }
 
+
+
+
+/*MOBILE */
 @media (max-width: 768px) {
     body {
-        font-size: 10px; /* Adjust the font size for mobile */
+        font-size: 10px; 
     }
 
     .book-list {
         display: flex;
         flex-wrap: wrap;
-        /* justify-content: space-between; */
         text-align: center;
         align-items: center;
     }
 
     .book-entry {
-        height: auto; /* Set a maximum height for book entries */
-        width: calc(40% - 20px); /* 25% width for 4 entries per row with margin */
-        margin: 10px 10px; /*Adjust margins for mobile spacing */
+        height: auto; 
+        width: calc(40% - 20px);
+        margin: 10px 10px; 
         vertical-align: top;
         display: inline-block;
     }
 
     .book-entry img {
-        width: 70%; /* Make book entry images take full width */
-        height: auto; /* Maintain aspect ratio of images */
+        width: 70%; 
+        height: auto; 
     }
 
     .book-entry .review {
