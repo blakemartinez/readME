@@ -343,7 +343,9 @@ footer img {
         width: calc(40% - 20px);
         margin: 10px 10px; 
         vertical-align: top;
-        display: inline-block;
+        text-align: center;
+        align-items: center;
+        /* display: inline-block; */
     }
 
     .book-entry img {
@@ -371,6 +373,7 @@ footer img {
         font-weight: bold;
         margin: 10px 0;
         text-align: center;
+        align-items: center;
         max-width: 120px;
         white-space: normal;
         overflow: hidden;
@@ -379,7 +382,7 @@ footer img {
     }
     
     .book-entry .author {
-        font-size: 6px;
+        font-size: 7px;
         margin-top: 2px;
         text-align: center;
         color: #555;
@@ -391,6 +394,7 @@ footer img {
         margin: 5px 0;
         display: flex;
         align-items: center;
+        text-align: center;
         gap: 5px;
         color: #f0c518;
     }
