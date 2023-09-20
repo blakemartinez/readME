@@ -203,9 +203,14 @@ header {
 .click-note {
     text-align: center;
     align-items: center;
-    color: #ffffff;
+    color: #222;
     border-radius: 5px;
-    margin-bottom: 3px;
+    margin: auto;
+    padding: 5px;
+    background-color: #f0c518;
+    margin-bottom: 1px;
+    font-style: italic;
+    font-size: 11px;
 }
 
 .stars {
@@ -382,7 +387,7 @@ footer img {
     }
     
     .book-entry .author {
-        font-size: 7px;
+        font-size: 9px;
         margin-top: 2px;
         text-align: center;
         color: #555;
