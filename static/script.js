@@ -5,7 +5,7 @@ readCountElement.textContent = readCount;
 
 const lastUpdatedElement = document.getElementById('last-updated');
 
-const lastUpdatedTimestamp = new Date('2023-09-19T21:32:32').getTime(); 
+const lastUpdatedTimestamp = new Date('2023-10-22T21:32:32').getTime(); 
 
 const formattedDate = new Date(lastUpdatedTimestamp).toLocaleString('en-US', {
     timeZone: 'America/Chicago', // Set the timezone to Central Time
