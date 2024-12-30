@@ -200,6 +200,19 @@ header {
     display: block;
 }
 
+.date-filter {
+    text-align: center;
+    align-items: center;
+    color: #222;
+    border-radius: 5px;
+    margin: auto;
+    padding: 5px;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    font-style: italic;
+    font-size: 11px;
+}
+
 .click-note {
     text-align: center;
     align-items: center;
@@ -215,7 +228,7 @@ header {
 
 .stars {
     font-size: 24px;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     margin: 5px 0;
     display: flex;
     align-items: center;
@@ -257,6 +270,11 @@ header {
 
 .fiction {
     background-color: #835c30;
+    color: #fff;
+}
+
+.biography {
+    background-color: #dd840f;
     color: #fff;
 }
 
