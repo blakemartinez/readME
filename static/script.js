@@ -1,14 +1,25 @@
-const readCount = document.querySelectorAll('.done .book-entry').length;
+const readEntries = document.querySelectorAll('.done .book-entry')
+
+let readCountForCurrentYear = 0;
+const currentYear = "2024";
+readEntries.forEach(entry => {
+    const bookDate = entry.getAttribute('data-date');
+
+    if (bookDate === currentYear) {
+        readCountForCurrentYear+=1;
+    }
+});
+
 
 const readCountElement = document.getElementById('read-count');
-readCountElement.textContent = readCount;
+readCountElement.textContent = readCountForCurrentYear;
 
 const lastUpdatedElement = document.getElementById('last-updated');
 
-const lastUpdatedTimestamp = new Date('2023-10-22T21:32:32').getTime(); 
+const lastUpdatedTimestamp = new Date('2024-12-30T21:32:32').getTime(); 
 
 const formattedDate = new Date(lastUpdatedTimestamp).toLocaleString('en-US', {
-    timeZone: 'America/Chicago', // Set the timezone to Central Time
+    timeZone: 'America/Chicago',
 });
 lastUpdatedElement.textContent = `${formattedDate}`;
 
@@ -52,9 +63,28 @@ bookEntries.forEach((bookEntry) => {
         // Toggle the visibility of the review container
         reviewContainer.classList.toggle('show-review');
     
-        const clickNote = document.querySelector('.click-note');
-        if (clickNote) {
-            clickNote.style.display = 'none';
+        // const clickNote = document.querySelector('.click-note');
+        // if (clickNote) {
+        //     clickNote.style.display = 'none';
+        // }
+    });
+});
+
+document.getElementById('filter-button').addEventListener('click', () => {
+    const selectedYear = document.getElementById('filter-year').value;
+    const bookEntries = document.querySelectorAll('.book-entry');
+
+    bookEntries.forEach(entry => {
+        const bookYear = entry.getAttribute('data-date');
+
+        if (!isNaN(parseInt(selectedYear))) {
+            if (bookYear === selectedYear) {
+                entry.style.display = 'flex';
+            } else {
+                entry.style.display = 'none';
+            }
+        } else {
+            entry.style.display = 'flex';
         }
     });
 });
