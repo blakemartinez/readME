@@ -79,12 +79,13 @@ document.getElementById('filter-button').addEventListener('click', () => {
 
         if (!isNaN(parseInt(selectedYear))) {
             if (bookYear === selectedYear) {
-                entry.style.display = 'flex';
+                entry.style.display = 'block';
             } else {
                 entry.style.display = 'none';
             }
         } else {
-            entry.style.display = 'flex';
+            entry.style.display = 'block';
+            
         }
     });
 });
