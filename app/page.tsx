@@ -2,7 +2,7 @@ import { books } from '@/lib/books'
 import BookPageClient from '@/components/BookPageClient'
 import AnalyticsSection from '@/components/AnalyticsSection'
 
-const doneThisYear = books.filter(b => b.status === 'done' && b.year === 2025).length
+const doneThisYear = books.filter(b => b.status === 'done' && b.year === 2026).length
 const yearlyGoal = 12
 const totalDone = books.filter(b => b.status === 'done').length
 
@@ -16,7 +16,7 @@ export default function Home() {
         </h1>
         <p className="font-mono text-muted mt-2 text-sm">keeping track of my reading 📚</p>
         <div className="flex justify-center gap-6 mt-4 font-mono text-xs text-muted">
-          <span>2025 books: <span className="text-accent">{doneThisYear}</span> / {yearlyGoal}</span>
+          <span>2026 books: <span className="text-accent">{doneThisYear}</span> / {yearlyGoal}</span>
           <span>total read: <span className="text-accent">{totalDone}</span></span>
         </div>
       </header>
@@ -42,7 +42,7 @@ export default function Home() {
         >
           github.com/blakemartinez
         </a>
-        <p className="mt-2">last updated: Dec 2024</p>
+        <p className="mt-2">last updated: Mar 2026</p>
       </footer>
     </div>
   )

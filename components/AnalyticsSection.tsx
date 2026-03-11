@@ -37,7 +37,7 @@ export default function AnalyticsSection({ books }: AnalyticsSectionProps) {
   const mostReadGenre = Object.entries(genreCounts).sort((a, b) => b[1] - a[1])[0]?.[0] ?? '—'
   const avgRating = getAvgRating(doneBooks)
 
-  const years = [2023, 2024, 2025]
+  const years = [2023, 2024, 2025, 2026]
 
   return (
     <section className="max-w-6xl mx-auto px-4 py-10 border-t border-white/10">
@@ -51,7 +51,7 @@ export default function AnalyticsSection({ books }: AnalyticsSectionProps) {
           { label: 'total read', value: doneBooks.length },
           { label: 'avg rating', value: `${avgRating} ★` },
           { label: 'top genre', value: mostReadGenre },
-          { label: '2025 books', value: doneBooks.filter(b => b.year === 2025).length },
+          { label: '2026 books', value: doneBooks.filter(b => b.year === 2026).length },
         ].map(({ label, value }) => (
           <div key={label} className="bg-surface border border-white/10 rounded-xl p-4 text-center">
             <p className="font-mono text-2xl text-accent font-bold">{value}</p>
