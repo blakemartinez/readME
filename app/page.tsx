@@ -1,5 +1,6 @@
 import { books } from '@/lib/books'
 import BookPageClient from '@/components/BookPageClient'
+import AnalyticsSection from '@/components/AnalyticsSection'
 
 const doneThisYear = books.filter(b => b.status === 'done' && b.year === 2025).length
 const yearlyGoal = 12
@@ -27,6 +28,9 @@ export default function Home() {
 
       {/* Client component handles filter state + book sections */}
       <BookPageClient books={books} />
+
+      {/* Analytics */}
+      <AnalyticsSection books={books} />
 
       {/* Footer */}
       <footer className="text-center py-8 border-t border-white/10 font-mono text-xs text-muted">
