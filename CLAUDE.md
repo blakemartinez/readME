@@ -20,32 +20,26 @@ EOF
 ```
 
 ### 2. Pre-Commit Staff Engineer Review (REQUIRED before committing to main)
-Before staging and committing any code changes, run a staff-level code review using the Agent tool:
+Do an inline staff-level review of the staged diff before committing. Check:
+- Bugs, logic errors, edge cases
+- Security vulnerabilities (XSS, injection, etc.)
+- TypeScript type safety
+- Accessibility (alt text, keyboard nav, cursor targets)
+- No regressions vs existing functionality
 
+**When to spawn a subagent review instead of inline:**
+Only use a `general-purpose` subagent review for diffs that are large (>200 lines changed) or touch security-sensitive code. For normal feature work, do the review inline to save tokens.
+
+Subagent prompt when needed:
 ```
-subagent_type: general-purpose
-prompt: |
-  You are a staff software engineer doing a pre-commit code review.
-  Review the following staged diff and all changed files for:
-  - Bugs, logic errors, or edge cases
-  - Security vulnerabilities (XSS, injection, etc.)
-  - Performance issues
-  - TypeScript type safety
-  - Accessibility (a11y)
-  - Any code that doesn't match the plan or introduces regressions
-
-  Diff: [paste git diff output]
-  Changed files: [list files]
-
-  Return:
-  1. LGTM if no issues found
-  2. A list of specific issues with file:line references if found
-  3. Suggested fixes for each issue
+You are a staff software engineer. Review this git diff for bugs, type errors, security issues, and a11y problems.
+Run: git diff --staged
+Return: LGTM or a numbered list of file:line issues with fixes.
 ```
 
 ### 3. Apply Review Fixes
-- If the review returns issues, fix all of them before committing.
-- Re-run the review agent on the updated diff until it returns LGTM.
+- Fix all flagged issues before committing.
+- Only re-run the review if you made significant changes after the first pass.
 - Then commit with the Co-Authored-By trailer.
 
 ### 4. Automated Commit Checklist
@@ -58,8 +52,14 @@ Before every commit:
 
 ---
 
+## Token Efficiency Rules (for multi-agent work)
+- **Agents read files themselves** — don't paste file contents into agent prompts. Give file paths instead.
+- **Scope briefs, not full implementations** — describe what to build, not every line of code.
+- **Inline review by default** — only spawn a subagent review for diffs >200 lines or security-sensitive code.
+- **Verify .gitignore before first commit** — especially after scaffolding tools (create-next-app, etc.).
+
 ## Project Overview
-Vanilla HTML/CSS/JS reading list site. Being revamped to Next.js 14+ with App Router, Tailwind CSS, shadcn/ui, and TypeScript. See plan in conversation history for full spec.
+Next.js 16 App Router reading list site. Revamped from vanilla HTML/CSS/JS.
 
 ## Stack (post-revamp)
 - Next.js 14+ (App Router, `output: 'export'`)
