@@ -11,7 +11,7 @@ export default function Home() {
     <div className="min-h-screen bg-bg">
       {/* Header */}
       <header className="text-center py-8 border-b border-white/10">
-        <h1 className="font-sans text-7xl md:text-8xl font-bold text-text-body">
+        <h1 className="font-sans text-5xl sm:text-7xl md:text-8xl font-bold text-text-body">
           read<span className="text-accent">ME</span>
         </h1>
         <p className="font-mono text-muted mt-2 text-sm">keeping track of my reading 📚</p>

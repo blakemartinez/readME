@@ -23,7 +23,7 @@ export const books: Book[] = [
     cover: '/static/scar_tissue.jpg',
     genres: ['Biography'],
     status: 'reading',
-    year: 2025,
+    year: 2026,
     whyReading: 'RHCP is one of my favorite bands of all-time. Heard Anthony\'s early life & road to fame is interesting to say the least.',
   },
   {
@@ -33,7 +33,7 @@ export const books: Book[] = [
     cover: '/static/the_price_of_time.jpg',
     genres: ['Non-fiction'],
     status: 'reading',
-    year: 2025,
+    year: 2026,
     whyReading: 'It\'s about time for me to dive deep into what/how/why interest, you know?',
   },
   {
@@ -43,7 +43,7 @@ export const books: Book[] = [
     cover: '/static/ball_lightning.jpg',
     genres: ['Sci-Fi'],
     status: 'reading',
-    year: 2025,
+    year: 2026,
     whyReading: 'Who would of guessed, me reading a Cixin Liu book. Well this books plot seemed interesting to me...especially since it has to do with extreme weather.',
   },
 

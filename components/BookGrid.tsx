@@ -82,7 +82,7 @@ export default function BookGrid({ title, books, emptyMessage }: BookGridProps) 
             />
           ))}
         {/* Individual books */}
-        <div className="flex flex-wrap gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:flex lg:flex-wrap gap-4">
           {groups
             .filter((g): g is Extract<GroupItem, { type: 'single' }> => g.type === 'single')
             .map(g => (

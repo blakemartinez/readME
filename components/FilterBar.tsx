@@ -42,14 +42,14 @@ export default function FilterBar({
     <div className="sticky top-0 z-10 bg-bg/95 backdrop-blur-sm border-b border-white/10 py-3 px-4">
       <div className="max-w-6xl mx-auto space-y-3">
         {/* Text search */}
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center gap-2">
           <input
             type="text"
             placeholder="search by title or author..."
             value={filters.query}
             onChange={e => onFiltersChange({ ...filters, query: e.target.value })}
             className="
-              flex-1 max-w-sm bg-surface border border-white/10 rounded-lg
+              flex-1 min-w-0 bg-surface border border-white/10 rounded-lg
               px-3 py-1.5 font-mono text-sm text-text-body
               placeholder:text-muted
               focus:outline-none focus:border-accent/50
@@ -57,7 +57,7 @@ export default function FilterBar({
             "
           />
           {/* Book count */}
-          <span className="font-mono text-xs text-muted ml-auto">
+          <span className="font-mono text-xs text-muted ml-auto whitespace-nowrap">
             {hasActiveFilters
               ? <><span className="text-accent">{visibleCount}</span> / {totalCount} books</>
               : <><span className="text-accent">{totalCount}</span> books</>
@@ -67,7 +67,7 @@ export default function FilterBar({
           {hasActiveFilters && (
             <button
               onClick={clearFilters}
-              className="font-mono text-xs text-muted hover:text-accent transition-colors underline underline-offset-2"
+              className="font-mono text-xs text-muted hover:text-accent transition-colors underline underline-offset-2 whitespace-nowrap"
             >
               clear
             </button>

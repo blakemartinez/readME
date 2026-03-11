@@ -29,7 +29,7 @@ export default function BookCard({ book }: BookCardProps) {
         }
         ${hasReview ? 'cursor-pointer' : 'cursor-default'}
         hover:scale-[1.02]
-        max-w-[200px] w-full
+        w-full sm:max-w-[200px]
       `}
       style={isReading ? {
         boxShadow: 'inset 0 0 20px rgba(59,130,246,0.05)'

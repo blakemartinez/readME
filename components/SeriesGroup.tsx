@@ -21,7 +21,7 @@ export default function SeriesGroup({ seriesName, books, totalInSeries }: Series
         <div className="flex-1 h-px bg-accent/10" />
       </div>
       {/* Horizontal book row */}
-      <div className="flex flex-wrap gap-4 px-2">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:flex lg:flex-wrap gap-4 px-2">
         {books
           .sort((a, b) => (a.seriesNumber ?? 0) - (b.seriesNumber ?? 0))
           .map(book => (
